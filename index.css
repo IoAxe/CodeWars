@@ -1,1 +1,9 @@
 
+.wrapper__head {
+   height: 50px; 
+   width: inherit;
+    text-align: center;
+}
+header {
+   color:rgb(42, 104, 104)
+}
