@@ -1,8 +1,7 @@
-
 "use strict";
 
 let countSheep = function (num) {
-    //your code here
+  
     let str = "sheep...";
     let number = num;
     let answer = "";
@@ -16,7 +15,30 @@ let countSheep = function (num) {
     }
 };
 
-console.log(countSheep(0));
+
+let zero = function (num) {
+    let arrSheep = '';
+    if (num > 0) {
+        for (let i = 1; i <= num; i++) {
+            arrSheep += `${i} sheep...`;
+        }
+    } return arrSheep;
+};
+
+const one = length =>
+    Array.from({ length }, (_, i) => ++i + ' sheep...').join(''); 
+
+
+const two = length =>
+    Array.from([length], (_, i) => ++i + ' sheep...').join(''); 
+
+
+const three = length =>
+    Array.from(length, (_, i) => ++i + ' sheep...').join('');
+
+
+const four = num => [...Array(num)].map((_, i) => `${i + 1} sheep...`).join('');
+
 
 
 
