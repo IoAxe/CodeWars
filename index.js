@@ -1,5 +1,5 @@
 "use strict";
-
+{
 let countSheep = function (num) {
   
     let str = "sheep...";
@@ -25,25 +25,30 @@ let zero = function (num) {
     } return arrSheep;
 };
 
-const one = length =>
-    Array.from({ length }, (_, i) => ++i + ' sheep...').join(''); 
+    const one = length =>
+        Array.from({ length }, (_, i) => ++i + ' sheep...').join('');
 
 
-const two = length =>
-    Array.from([length], (_, i) => ++i + ' sheep...').join(''); 
+    const two = length =>
+        Array.from([length], (_, i) => ++i + ' sheep...').join('');
 
 
-const three = length =>
-    Array.from(length, (_, i) => ++i + ' sheep...').join('');
+    const three = length =>
+        Array.from(length, (_, i) => ++i + ' sheep...').join('');
 
 
-const four = num => [...Array(num)].map((_, i) => `${i + 1} sheep...`).join('');
+    const four = num => [...Array(num)].map((_, i) => `${i + 1} sheep...`).join('');
 
+}
 
+function stringToArray(string) {
 
+    // code code code
+    return string.split(" ");
 
+}
 
-
+console.log(stringToArray("a d c g"));
 
 
 
