@@ -1,4 +1,5 @@
 "use strict";
+/*
 {
 let countSheep = function (num) {
   
@@ -40,17 +41,40 @@ let zero = function (num) {
     const four = num => [...Array(num)].map((_, i) => `${i + 1} sheep...`).join('');
 
 }
+*/
 
-function stringToArray(string) {
+function longestZero(s1, s2) {
 
-    // code code code
-    return string.split(" ");
-
+    let str = s1 + s2;
+    let answer = [];
+    let newStr = str.split("").sort();
+    for (let i = 0; i < newStr.length; i++){
+        if (newStr[i] === newStr[i + 1]) {
+            newStr.shift();
+            i--;
+        } else {
+            answer.push(newStr[i]);
+        }
+    }
+    return answer.join("");
 }
 
-console.log(stringToArray("a d c g"));
+
+function longestOne(s1, s2) {
+    return (s1 + s2).split('').sort().join('').replace(/(.)\1+/g, '$1');
+}
+
+
+const longestTwo = (s1, s2) => Array.from(s1 + s2)
+    .sort()
+    .filter((x, i, a) => x !== a[i - 1])
+    .join('');
 
 
 
+function longestFour(s1, s2) {
+    return Array.from(new Set(s1 + s2)).sort().join('');
+}
 
 
+const longestFive = (s1, s2) => [...new Set(s1 + s2)].sort().join('');
